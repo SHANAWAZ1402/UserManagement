@@ -18,7 +18,7 @@ const homeroutes=(req,res)=>{
 }
 // create a service to render new_User page
 const add_user=(req,res)=>{
-    res.render('new_User',{username:req.session.username});
+    res.render('new_User.ejs',{username:req.session.username});
 }
 // create a service to render update_User page
 const update_user=(req,res)=>{
@@ -26,7 +26,7 @@ const update_user=(req,res)=>{
     console.log('update');
     axios.get(`${process.env.DEPLOY_URL}/userpage/api/users` ,{params:{id:req.query.id}})
     .then((data)=>{
-     res.render('update_user',{user:data.data,username:req.session.username})}).catch(e=>res.send(e));
+     res.render('update_user.ejs',{user:data.data,username:req.session.username})}).catch(e=>res.send(e));
 }
 const search=(req,res)=>{
     const name=req.params.id;
