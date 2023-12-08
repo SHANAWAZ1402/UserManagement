@@ -18,7 +18,7 @@ const homeroutes=(req,res)=>{
 }
 // create a service to render new_User page
 const add_user=(req,res)=>{
-    res.render('new_User.ejs',{username:req.session.username});
+    res.render('new_user.ejs',{username:req.session.username});
 }
 // create a service to render update_User page
 const update_user=(req,res)=>{
