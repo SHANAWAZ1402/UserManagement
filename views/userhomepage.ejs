@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/userhomepage.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="leftbar">
+            <div class="leftbarheading">
+                <h3>User Profile (Hi! <%=username%>)</h3>
+            </div>
+            <div class="leftbarmenus">
+                <div class="start margin">
+                    <a href="/userhomepage/api/dashboard"><h3>Dashboard</h3></a>
+                   <h3>Page Packs</h3>
+                </div>
+                <div class="userinterface margin">
+                    <h2>USER INTERFACE</h2>
+                    <a href="/userhomepage/api/weather"><h3>Weather Forecast</h3></a>
+                    <a href="/userhomepage/api/books"><h3>Books</h3></a>
+                    <h3>Elements</h3>
+                    <h3>Tables</h3>
+                    <h3>Forms</h3>
+                </div>
+                <div class="develop margin">
+                    <h2>DEVELOP</h2>
+                    <h3>Components</h3>
+                    <h3>Layout</h3>
+                    <h3>MultiLevel</h3>
+                    <a href="/userhomepage/logout"><h2 style="margin-top:45px; color: aliceblue;">Log Out</h2></a>
+                </div>
+            </div>
+        </div>
+        <div class="rightbar">
+            <div class="rightbarheading">
+                <h2><%=activation%></h2>
+            </div>
+            <div class="rightbarbrief">
+                    <%if(page=="weather"){%>
+                       <%-include('include/apipage.ejs')%>
+                    <%}else if(page=="books"){%>
+                        <%-include('include/bookspage.ejs')%>
+                    <%}else{%>
+                        <%-include('include/dashboard.ejs')%>
+                   <%}%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

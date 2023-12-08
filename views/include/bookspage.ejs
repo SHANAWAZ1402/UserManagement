@@ -1,0 +1,23 @@
+<div>
+    <div class="searchbar">
+      <form action="/userhomepage/api/books" method="get">
+      <input type="search" name="book" placeholder="Book name"/>
+      <button type="submit">Search</button>
+    </form>
+    </div>
+    <%for(var i=0;i<rows;i++){%>
+    <%if(data.items[k]?.volumeInfo?.imageLinks?.thumbnail!=null){%>    
+    <div class="row">
+        <%for(var j=0;j<4;j++){%>
+            <%if(data.items[k]?.volumeInfo?.imageLinks?.thumbnail!=null){%> 
+        <div class="column">
+            <%k++%>
+            <img src='<%=data.items[k]?.volumeInfo?.imageLinks?.thumbnail%>' width="200" height="200"/>
+            <h3 style="text-align:center;"><%=data.items[k]?.volumeInfo?.title%></h3>
+        </div>
+        <%}}%>
+    </div>
+    <%}}%>
+    </div>
+    </div>
+</div>

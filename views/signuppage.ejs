@@ -1,0 +1,31 @@
+<%-include('include/header2')%>
+    <div class="container" style="height:120vh;">
+      <marquee>To query about membership plans, Contact our admin team:Shanawaz4323@gmail.com</marquee>
+        <div class="subcontainer" style="height:auto;";>
+           <div class="heading">
+             <h3>SIGN UP</h3>
+             <div class="forgot">
+                <h4>Forgot password? </h4>
+                <a href="/">
+               <img src="img/adduser.png" width="30" height="30"/>   
+            </a>
+             </div>
+           </div>
+           <div class="belowheading">
+              <div class="subbelow">
+                 <h2>User Management</h2>
+                 <h3>Welcome, please login.</h3>
+                 <form method="POST" action="/signup">
+                     <input type="text" placeholder="Username" name="username"/>
+                     <input type="email" placeholder="Email" name="email"/>
+                     <input type="password" placeholder="Password" name="password"/>
+                     <input type="password" placeholder="Confirm Password" name="confirmpassword"/>
+                     <div class="checkforage"><input type="checkbox" name="18" class="check"><label for="check">I agree to Terms & Conditions</label></div>
+                      <h4 style="color: red;"><%=error%></h4>
+                     <button type="submit" style="background-color: rgb(131, 255, 214); color:rgb(6, 79, 55) ;">SIGN UP</button>
+                 </form>
+               </div>
+           </div>
+          </div>
+        </div>
+    <div>

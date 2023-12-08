@@ -1,0 +1,120 @@
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container
+{
+    background-color:rgb(222, 226, 232);
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: url('../Img/background.png');
+}
+.container marquee
+{
+    color:rgb(222, 226, 232);
+    font-size:25px;
+    margin-bottom:20px;
+}
+.subcontainer
+{
+    width:30vw;
+    height:80vh;
+    background-color:white;
+    border-radius:8px;
+}
+.heading 
+{
+width:100%;
+height:10%;
+background-color:#ebe8e8;
+border-top-right-radius:8px;
+border-top-left-radius:8px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding:20px;
+}
+.belowheading
+{
+ width:100%;
+ height:90%;
+}
+.heading .forgot
+{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+h4
+{
+    margin-right:14px;
+    color: rgb(132, 132, 132);
+    font-weight: 500;
+}
+}
+.belowheading .subbelow
+{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left:45px;
+    align-items: flex-start;
+    margin-top:70px;
+}
+.subbelow h2
+{
+    font-size:27px;
+    margin-bottom:5px;
+}
+.subbelow h3
+{
+    margin-top:5px;
+    color: #878686;
+    font-weight:500;
+}
+.subbelow input
+{
+    margin-top:35px;
+    width:24vw;
+    height:40px;
+    border-radius:7px;
+    background-color: #e7e4e4;
+    border: none;
+    text-indent:17px;
+    font-size:20px;
+}
+.subbelow button
+{
+    background-color: rgb(168, 216, 255);
+    border-radius:5px;
+    width:100px;
+    height:40px;
+    border: none;
+    color: rgb(8, 68, 117);
+    font-size: 22px;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+.subbelow .checkforage
+{
+    display: flex;
+    width:100%;
+    margin-top:30px;
+}
+.subbelow .checkforage input
+{
+
+    margin-top:0px;
+    width:20px;
+    height:20px;
+    border-radius:7px;
+    border: none;
+    margin-right:20px;
+}

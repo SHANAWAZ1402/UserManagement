@@ -1,0 +1,25 @@
+<div>
+    <div class="searchbar">
+      <form action="/userhomepage/api/weather" method="get">
+      <input type="search" name="search" placeholder="City Name"/>
+      <button type="submit">Search</button>
+    </form>
+    </div>
+    <h1>Hello</h1>
+    <div class="maincontent">
+        <div class="subcontent">
+  
+          <%if(display==true){%>
+        <h1><%=data.name%></h1>
+        <h2>Country:<span><%=data?.sys.country%></span></h2>
+        <h3>Coordinates:</h3>
+        <h3>Latitude:<span><%=data?.coord.lat%></span></h3>
+        <h3>Longitude:<span><%=data?.coord.lon%></span></h3>
+       <h3>Minimum Temp:<span><%=data?.main.temp_min%>F</span></h3>
+       <h3>Maximum Temp:<span><%=data?.main.temp_max%>F</span></h3>
+       <h3>Pressure:<span><%=data?.main.pressure%></span></h3>
+       <h3>Humidity:<span><%=data?.main.humidity%></span></h3>
+        <%}%>
+    </div>
+    </div>
+</div>

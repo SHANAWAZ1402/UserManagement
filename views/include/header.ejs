@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=<1.0>">
+    <title>User Managment System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav>   
+            <div class="container">
+                <div class="sub-container">
+                    <i class="fa-solid fa-house home"></i>
+             <div class="text-center">  
+                <a href="/userpage" class="nav-brand-text-dark title">
+                User Management System
+                </a>
+             </div>
+             <div class="userdetails">
+                <div class="user">
+                   <img src="Img/adduser.png"><h3><%=username%></h3>
+                   <img src="Img/arrow.png"  style="margin-left:10px; width:20px; height:15px;" class="im">
+                </div>
+                <div class="usersetting">
+                    <div class="userdetails">
+                        <img src="Img/adduser.png"/>
+                        <h2><%=username%></h2>
+                        <h2>Web Developer</h2>
+                    </div>
+                    <div class="settings">
+                        <h3>Inbox</h3>
+                        <h3>Profile</h3>
+                        <hr style="margin-left:-20px;margin-top:13px;color: rgba(119, 119, 119, 0.082);image-rendering: pixelated;"/>
+                        <h3>Settings</h3>
+                        <h3>Lock Account</h3>
+                        <a href='/logout'><h3>Log Out</h3></a>
+                    </div>
+                </div> 
+             </div>
+            </div>  
+        </div>       
+        </nav>
+    </header>
