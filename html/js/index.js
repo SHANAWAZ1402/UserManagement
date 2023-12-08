@@ -1,6 +1,7 @@
 var userdetails=document.querySelector('.userdetails');
 var usersetting=document.querySelector('.usersetting');
 
+const url='https://user-management-system-jq2v.onrender.com'
 
 userdetails.addEventListener('click',()=>{    
 usersetting.style.display=="block"?usersetting.style.display='none':usersetting.style.display='block';
@@ -18,7 +19,7 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
     var request = {
-        "url" : `http://localhost:8000/userpage/api/users/${data.id}`,
+        "url" : `${url}/userpage/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -35,7 +36,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:8000/userpage/api/users/${id}`,
+            "url" : `${url}/userpage/api/users/${id}`,
             "method" : "DELETE"
         }
 

@@ -10,7 +10,7 @@ const homeroutes=(req,res)=>{
        return;
     }
     const db=userDb.find({}).then(data=>
-    axios.get('http://localhost:8000/userpage/api/users').then((resp)=>{
+    axios.get(`${process.env.DEPLOY_URL}/userpage/api/users`).then((resp)=>{
         const username=req.session.username;
         console.log('sure',username);
         res.render('index.ejs',{users:resp.data,username:username})}).catch(e=>res.send(e)));
@@ -24,7 +24,7 @@ const add_user=(req,res)=>{
 const update_user=(req,res)=>{
     // res.render('update_user');
     console.log('update');
-    axios.get('http://localhost:8000/userpage/api/users',{params:{id:req.query.id}})
+    axios.get(`${process.env.DEPLOY_URL}/userpage/api/users` ,{params:{id:req.query.id}})
     .then((data)=>{
      res.render('update_user',{user:data.data,username:req.session.username})}).catch(e=>res.send(e));
 }
